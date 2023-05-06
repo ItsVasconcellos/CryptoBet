@@ -1,0 +1,49 @@
+*{
+    background-color: black;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 143vh; /* opcional: define a altura do contêiner para ocupar toda a altura da tela */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+.desafio{
+  opacity: 0;
+    position: absolute;
+    top: 20px;
+    left: 687px;
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    color: white;
+}
+
+.apostas{
+  opacity: 0;
+    position: absolute;
+    top: 20px;
+    left: 840px;
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    color: white;
+}
+
+.perfil{
+  opacity: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 50px;
+    background-color: green;
+    color: white;
+}
