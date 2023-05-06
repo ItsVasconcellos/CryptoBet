@@ -1,60 +1,61 @@
+/* o todo do projeto */
 *{
   margin: 0;
   padding: 0;
 }
 
-.body{
-  background-color: #000000;
-}
-
+/* cor dos links*/
 a{
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
 }
 
+/* hover nos links para estilizacao quando mouse passar em cima */
 a:hover{
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
-/* Add a black background color to the top navigation */
+/* Adicionar background verde para o navbar da pagina funcional */
 .topnav {
   background-color: #58D839;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
+/* Estilizando os links*/
 .topnav a {
 position: relative;
 color: #f2f2f2;
-padding: 14px 16px;
+padding: 35px 20px;
 text-align: center;
 text-decoration: none;
 font-size: 17px;
 }
 
-/* Change the color of links on hover */
+/* mudando a cor dos links quando mouse passa pelos links*/
 .topnav a:hover {
 background-color: #ddd;
 color: black;
 }
 
+/* margem da navegacao */
 .topnav img{
-  margin: 0%;
+  margin: 0%; 
 }
 
-/* Add a color to the active/current link */
+/*  Add a cor para o link atual */
 .topnav a.active {
 background-color: #04AA6D;
 color: white;
 }
 
-/* Right-aligned section inside the top navigation */
+/* alinhamento a direita para a secao de navegacao */
 .topnav-right {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   float: right;
 }
 
+/* elementos referentes a logo */
 .imagemlogo{
   position: relative;
   width: 284px;

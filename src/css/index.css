@@ -1,19 +1,23 @@
+/* o corpo todo do projeto */
 *{
     background-color: black;
 }
 
+/* caixa da imagem */
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* opcional: define a altura do contêiner para ocupar toda a altura da tela */
+    height: 100vh; 
   }
   
+  /* referente ao tamanho da imagem */
   img {
     max-width: 100%;
     height: auto;
   }
 
+/* link para outra pagina */
 .button{
     opacity: 0;
     position: absolute;

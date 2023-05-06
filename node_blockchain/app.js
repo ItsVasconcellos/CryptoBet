@@ -13,15 +13,15 @@ app.use(bodyParser.json());
 
 // Rotas (fora das APIs da Hathor)
     app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname + "/html/index.html"));
+        res.sendFile(path.join(__dirname + "/src/html/index.html"));
     });
 
     // Criação da aposta 
-    app.get('/create_bet', (req, res) => {
+    app.get('/desafio', (req, res) => {
         res.sendFile(path.join(__dirname + "/html/create_bet.html"));
     });
 
-    app.get('/create_bet/get', (req, res) => {
+    app.post('/desafio/get', (req, res) => {
         const { name, date, desc, cond_x_name, cond_x_symbol, cond_y_name, cond_y_symbol } = req.query;
         const queryParams = new URLSearchParams({ name, date, desc, cond_x_name, cond_x_symbol, cond_y_name, cond_y_symbol }).toString();
         createToken(cond_x_name, cond_x_symbol);
@@ -30,8 +30,18 @@ app.use(bodyParser.json());
     });
 
     // Visualização da aposta para preencher
-    app.get('/view_bet', (req, res) => {
+    app.get('/apostas', (req, res) => {
+        res.sendFile(path.join(__dirname + "/src/html/apostas.html"));
+    });
 
+    //
+    app.get('/dashboard', (req, res) => {
+        res.sendFile(path.join(__dirname + "/src/html/dashboard.html"));
+    });
+
+    //
+    app.get('/perfil', (req, res) => {
+        res.sendFile(path.join(__dirname + "/src/html/perfil.html"));
     });
 //
 

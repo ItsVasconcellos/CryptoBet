@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- link com o bootstrap para a navbar -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>desafio</title>
 </head>
-<body>
-  <header>  
+<!-- pagina para criar apostas/desafios com conexao de blockchain pelo hathor -->
+<body style="background: black">
+  <!-- Header com o codigo da navbar -->
+  <header>
+    <!--- div para alocar os links na horizontal -->
     <div class="topnav">
-        <img src="../img/logo.jpg" height="50rem"  class="imagemlogo">
-        <a href="./apostas.html">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>      
-      <div class="topnav-right">
-        <a href="#search">Search</a>
-        <a href="#about">About</a>
-      </div>
-    </div>          
+                <img src="../img/logo.jpg" height="50rem" width="" class="imagemlogo">
+                <a href="../html/">Categorias de Esporte</a>
+                <a href="../html/desafio.html">Meus Desafios</a>
+                <a href="#">Minhas Apostas</a>      
+            <div class="topnav-right">
+                <a><img src="../img/search.svg"></a>
+                <span style="color:white;"> 0,00 HTR |</span><a href="../html/perfil.html">Depositar</a>
+                <a></a>
+                <a href="../html/perfil.html"><img src="../img/iconPerfil.svg"></a>
+              <!--  -->
+            </div>
+        </div>    
   </header>
+  <!-- fim da navbar e comeco da pagina feita com hathor -->
   <h1>CRIAR DESAFIO</h1>
   <br><br>
+  <!-- modal para abrir o formulario e preencher com novas apostas -->
   <button id="btn" class="btn"><img src="../img/icone_mais.svg" height="30px" width="40px"/></button>
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="fechar">&times;</span>
       <p class="title">Criar Aposta</p>
       <br><br>
+      <!-- formulario para criacao das apostas/desafios -->
       <form method="POST" action="/desafio.html"> <!-- alterar endereco  -->
         <label for="name">Digite o nome da aposta:</label>
         <input type="text" name="name" id="name" required>
@@ -47,7 +57,7 @@
           </form>
     </div>
   </div>
-
+      <!-- chamar javascript para funcionar o javascript -->
     <script type="text/javascript" src="../data/desafio.js"></script>
   </body>
 </html>
