@@ -8,23 +8,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 140vh; 
   }
   
   /* referente ao tamanho da imagem */
-  img {
+img {
     max-width: 100%;
     height: auto;
   }
 
 /* link para outra pagina */
-.button{
-    opacity: 0;
+.desafio{
+  opacity: 0;
     position: absolute;
-    top: 414px;
-    left: 560px;
-    width: 140px;
+    top: 20px;
+    left: 730px;
+    width: 80px;
     height: 50px;
     background-color: green;
     color: white;
+}
+
+.apostas{
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 340px;
+  width: 80px;
+  height: 50px;
+  background-color: green;
+  color: white;
+}
+
+.perfil{
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  color: white;
 }

@@ -4,29 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/apostas.css" />
+    <link rel="stylesheet" type="text/css" href="apostas.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>Apostas</title>
 </head>
 <!-- pagina funcional com aplicacao para a hathor -->
-<body style="background: black">
+<body>
     <!-- Header com o codigo da navbar -->
     <header>
         <!--- div para alocar os links na horizontal -->
         <div class="topnav">
-                <img src="../img/logo.jpg" height="50rem" width="" class="imagemlogo">
+                <img src="logo.jpg" height="50rem" width="" class="imagemlogo">
                 <a href="../html/">Categorias de Esporte</a>
-                <a href="../html/desafio.html">Meus Desafios</a>
-                <a href="#">Minhas Apostas</a>      
+                <a href="/desafio">Meus Desafios</a>
+                <a href="/apostas">Minhas Apostas</a>      
             <div class="topnav-right">
-                <a><img src="../img/search.svg"></a>
+                <a><img src="search.svg"></a>
                 <span style="color:white;"> 0,00 HTR |</span><a href="../html/perfil.html">Depositar</a>
                 <a></a>
-                <a href="../html/perfil.html"><img src="../img/iconPerfil.svg"></a>
+                <a href="/perfil"><img src="iconPerfil.svg"></a>
               <!--  -->
             </div>
         </div>          
     </header>
+    <!--<div class="card mb-3" style="max-width: 540px; position: absolute; left: 12em; top: 12em; height: 15em; background: #8D44FF; color: white;">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <div class="card-body">
+            <div id="title-aposta"><h5 class="card-title"><span id="name"></span></h5></div>
+            <p class="card-text">Prazo:<span id="date"></span></p>
+            <p class="card-text" style="position: absolute; background: #5B28AB;" id="teste1">1 <span style="visibility:hidden;">----------------------</span> 1.02</p>
+            <p class="card-text" style="position: absolute; background: #5B28AB;" id="teste2">1 <span style="visibility:hidden;">----------------------</span> 1.02</p>
+            <p class="card-text" style="position: absolute; background: #5B28AB;" id="teste">1 <span style="visibility:hidden;">----------------------</span> 1.02</p>
+            </div>
+        </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>!-->
+
+      <!-- <div class="row">
+        <div class="col-sm-6 mb-3" >
+          <div class="card" style="max-width: 540px; position: absolute; left: 12em; top: 12em; height: 15em; background: #8D44FF; color: white; ">
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color:#ffffff; font-size: 17px; visibility:false"><div id="name_aposta"></div></h5>
+              <p class="card-text text-center">Quem vai entregar mais na sprint 3?</p>
+              <p class="card-text">Prazo:<span id="date"></span></p>
+              <p class="card-text"><small class="text-body-secondary">Compartilhar</small></p>              
+              <p class="card-text"><a href="#" class="btn btn-primary" style="background: #5B28AB; margin-right: 1em;align-content: left;"><span id="btn11">Opção 1</span></a><a href="#" class="btn btn-primary" style="background: #5B28AB; align-content: right;"><span id="btn12">Opção 2</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-sm-6 mb-3" >
+          <div class="card" style="max-width: 540px; position: absolute; left: 12em; top: 12em; height: 15em; background: #8D44FF; color: white; ">
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color:#ffffff; font-size: 17px; visibility:false"><div id="name_aposta2"></div></h5>
+              <p class="card-text text-center"><span id="name"></span></p>
+              <p class="card-text">Prazo:<span id="date"></span></p>
+              <p class="card-text"><small class="text-body-secondary">Compartilhar</small></p>              
+              <p class="card-text"><a href="#" class="btn btn-primary" style="background: #5B28AB; margin-right: 1em;align-content: left;"><span id="btn21">Opção 1</span></a><a href="#" class="btn btn-primary" style="background: #5B28AB; align-content: right;"><span id="btn22">Opção 2</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!--
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+      <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const date = params.get('date');
+        const desc = params.get('desc');
+        const cond_vic = params.get('cond_vic');
+
+        document.getElementById('name').innerHTML = name;
+        document.getElementById('date').innerHTML = date;
+
+      </script>
 </body>
 </html>

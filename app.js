@@ -4,12 +4,21 @@ const axios = require('axios'); // Biblioteca necessária para manipular as APIs
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+// const __dirname = path.resolve();
 
 const app = express();
+
+app.use(express.static("./src/img"));
+app.use(express.static("./src/css"));
+app.use(express.static("./src/data"));
+
+
+// app.use(express.static(__dirname + '/public'));
 
 // Body-parser convertendo dados para JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 
 // Rotas (fora das APIs da Hathor)
     app.get('/', (req, res) => {
@@ -18,15 +27,15 @@ app.use(bodyParser.json());
 
     // Criação da aposta 
     app.get('/desafio', (req, res) => {
-        res.sendFile(path.join(__dirname + "/html/create_bet.html"));
+        res.sendFile(path.join(__dirname + "/src/html/desafio.html"));
     });
 
-    app.post('/desafio/get', (req, res) => {
+    app.get('/desafio/get', (req, res) => {
         const { name, date, desc, cond_x_name, cond_x_symbol, cond_y_name, cond_y_symbol } = req.query;
         const queryParams = new URLSearchParams({ name, date, desc, cond_x_name, cond_x_symbol, cond_y_name, cond_y_symbol }).toString();
-        createToken(cond_x_name, cond_x_symbol);
-        createToken(cond_y_name, cond_y_symbol);
-        res.redirect(`/?${queryParams}`);
+        //createToken(cond_x_name, cond_x_symbol);
+        //createToken(cond_y_name, cond_y_symbol);
+        res.redirect(`/apostas/?${queryParams}`);
     });
 
     // Visualização da aposta para preencher
@@ -51,6 +60,7 @@ app.use(bodyParser.json());
     });
 //
 
+// Função que inicia a WALLET na aplicação
 function startWallet() {
     axios.post('http://localhost:8000/start', {
         'wallet-id': 'def', // def é um nome qualquer
@@ -60,6 +70,7 @@ function startWallet() {
     });
 };
 
+// Exibir endereços 
 function getAddresses() {
     axios.get('http://localhost:8000/wallet/addresses', {
         headers: {
@@ -70,6 +81,7 @@ function getAddresses() {
     });
 };
 
+// Criar TOKEN
 function createToken(name, symbol) {
     axios.post('http://localhost:8000/wallet/create-token',
     {
@@ -92,6 +104,26 @@ function createToken(name, symbol) {
         throw error;
     })
 };
+
+function enviaToken(token) {
+    axios.post('http://localhost:8000/wallet/simple-send-tx', 
+    {
+        'adress': 'WSLXsqUKiUevdKrKniydc2VJ4GL2Drp3Qg',
+        'value': 100,
+        'token': token
+    },
+    {
+        headers: {
+            'x-wallet-id': 'def',
+        }
+    }).catch(function(error){
+        if(error.message) {
+
+        }
+    })
+}
+
+enviaToken('00ffafd27cf5cced7232a0077b7cb76a6030ff96598ac6ff2ee7be95891ea3c6')
 
 // startWallet();
 // getAddresses();
