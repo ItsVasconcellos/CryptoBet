@@ -64,16 +64,28 @@ Foi utilizado essas tecnologias para o desenvolvimento do projeto:
 - Hathor API
 - Docker
 
-## Como rodar a aplicação
+## Etapas para o funcionamento da aplicação
 
 É necessário a instalação de algumas tecnologias para poder utilizar de nossa aplicação, sendo elas:
 - Node
 - Npm
-- Uma Ide de sua preferência (Visual Studio é a de mais fácil uso)
+- Uma Ide de sua preferência (Visual Studio é recomendado)
 
 ### Criação de uma Wallet da Hathor  
 
 Para que possa utilizar nossa aplicação é vital importância a criação de uma wallet da Hathor. Para isso deve entrar nesse <a href="https://hathor.network/resources/hathor-wallet/">link</a>. No link, terá a opção de baixar um executável variando de acordo com sua plataforma. Após o Download do executável, deve-se executá-lo e seguir o tutorial fornecido nele. Será fornecido uma opção entre Hardware Wallet e Software Wallet, para fins do projeto deve-se escolher a Software Wallet. Durante o processo, caso você já tenha uma carteira da Hathor, ela poderá ser importada ou criado uma nova. Caso selecione a opção de nova carteira, será exigido a criação de 24 palavras, as quais são tokens de segurança caso a senha seja perdida e devem ser guardadas em lugar seguro. Ademais é necessário a criação de uma senha para a conta e um pin para a realização de transações.
 
+### Uso do Docker para rodar a API
+https://hathor.gitbook.io/hathor/guides/headless-wallet/install-as-a-docker-container
 
-### 
+A API da Hathor funciona por meio de um ambiente Docker de desenvolvimento, logo seu uso é de vital importância para que a aplicação possa ser utilizada. Primeiramente, no <a href="https://www.docker.com/products/docker-desktop/">link</a> instale uma versão do Docker de acordo com seu sistema operacional. Com o Docker instalado, vá para o github e clone esse <a href="https://github.com/HathorNetwork/hathor-wallet-headless.git">repositório</a>, ele contém toda a API da Hathor que poderá ser utilizada na sua aplicação. Em README, mude "network" para "testnet", adicione a seed da sua wallet dentro do repositório (as 24 palavras geradas quando você criou quando criou sua carteira). Feito tudo isso, no terminal, digite "npm start", se tudo der certo a API estará rodando, a mantenha ligada enquanto estiver utilizando a CryptoBet.
+
+### Rodar a aplicação
+
+Para a execução da aplicação é necessário abrir o Terminal/Cmd dentro do diretório em que o projeto se localiza e executar os seguintes comandos:
+```
+npm install express
+npm i
+node app.js
+``` 
+Após a execução dos comandos aparecerá um link, escrito https://localhost:8081, no qual a aplicação estará rodando.
