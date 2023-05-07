@@ -31,18 +31,23 @@ In this hackathon we developed an application for safe betting using Hathor Netw
 ## Documentação
 Foi desenvolvido uma documentação do projeto focada em análise de mercado, entendimento da proposta, arquitetura do sistema e prototipagem do sistema. A documentação se encontra <a href="https://docs.google.com/document/d/1Y6gyiHvGz96yNZH1LmRvvzkRZO2S7VSM/edit#heading=h.147n2zr">neste documento</a>  
 
-## Proposta de valor 
+## Analise de mercado
+
+O grupo realizou o desenvolvimento de uma matriz SWOT (Strengths, Weakness, Opportunities, Threats) sobre o produto sendo desenvolvido.
+ ![AnaliseSwot](https://user-images.githubusercontent.com/84935638/236674846-a6ab0e94-26eb-4e9b-a45b-2975d610fc7a.jpeg)
+
+Além disso, como âmbito em facilitar o entendimento sobre a proposta, foi feito um Canvas Value Proposition, o qual explica a necessidade do projeto.
+![CanvasValue](https://user-images.githubusercontent.com/84935638/236674923-68000a79-e7d4-4156-bb8f-8565ce8121ef.jpeg)
 
 ## Arquitetura de pastas
 
-
-├── node_modules
-├── src
-│    ├── css
-│    ├── data
-│    │── html
-│    ├── img
-├── app.js
+├── node_modules <br>
+├── src <br>
+│    ├── css <br>
+│    ├── data <br>
+│    │── html <br>
+│    ├── img <br>
+├── app.js <br>
 ├── README.md
 
 ## Tecnologias
@@ -57,3 +62,18 @@ Foi utilizado essas tecnologias para o desenvolvimento do projeto:
 - Axios
 - Bootstrap
 - Hathor API
+- Docker
+
+## Como rodar a aplicação
+
+É necessário a instalação de algumas tecnologias para poder utilizar de nossa aplicação, sendo elas:
+- Node
+- Npm
+- Uma Ide de sua preferência (Visual Studio é a de mais fácil uso)
+
+### Criação de uma Wallet da Hathor  
+
+Para que possa utilizar nossa aplicação é vital importância a criação de uma wallet da Hathor. Para isso deve entrar nesse <a href="https://hathor.network/resources/hathor-wallet/">link</a>. No link, terá a opção de baixar um executável variando de acordo com sua plataforma. Após o Download do executável, deve-se executá-lo e seguir o tutorial fornecido nele. Será fornecido uma opção entre Hardware Wallet e Software Wallet, para fins do projeto deve-se escolher a Software Wallet. Durante o processo, caso você já tenha uma carteira da Hathor, ela poderá ser importada ou criado uma nova. Caso selecione a opção de nova carteira, será exigido a criação de 24 palavras, as quais são tokens de segurança caso a senha seja perdida e devem ser guardadas em lugar seguro. Ademais é necessário a criação de uma senha para a conta e um pin para a realização de transações.
+
+
+### 
