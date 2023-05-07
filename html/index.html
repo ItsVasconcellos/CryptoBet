@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CryptoBet - Home</title>
+    </head>
+    <body>
+        <h1>CryptoBet</h1>
+        <section>
+            <h2>Crie uma aposta</h2>
+            <a href="/create_bet"><button>Criar</button></a>
+        </section>
+        <section>
+            <h2>Seus desafios (apostas criadas)</h2>
+            <script>
+                const params = new URLSearchParams(window.location.search);
+                const name = params.get('name');
+                const date = params.get('date');
+                const desc = params.get('desc');
+                const cond_vic = params.get('cond_vic');
+
+                function exibeDesafios() {
+                    document.write(`Nome da aposta: ${name}<br>`);
+                    document.write(`Data da aposta: ${date}<br>`);
+                    document.write(`Descrição da aposta: ${desc}<br>`);
+                    document.write(`Condição de vitória da aposta: ${cond_vic}<br>`);
+                };
+
+                if (name == null && date == null && desc == null && cond_vic == null) {
+                    console.log("null")
+                } else {
+                    exibeDesafios();
+                }
+            </script>
+        </section>
+        <section>
+            <h2>Suas apostas (apostas que você está participando)</h2>
+        </section>
+    </body>
+</html>

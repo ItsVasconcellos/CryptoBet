@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CryptoBet - Criar aposta</title>
+    </head>
+    <body>
+        <form method="GET" action="/create_bet/get">
+            <label for="name">Digite o nome da aposta:</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+            <label for="date">Data final da aposta:</label>
+            <input type="date" name="date" id="date" required>
+            <br>
+            <label for="desc">Descricao da aposta:</label>
+            <input type="text" name="desc" id="desc" required>
+            <br>
+            <br>
+            <label for="cond_x_name">Condição X:</label>
+            <input type="text" name="cond_x_name" id="cond_x_name" placeholder="Brasil ganhar"required>
+            <br>
+            <label for="cond_x_symbol">Símbolo condição X:</label>
+            <input type="text" name="cond_x_symbol" id="cond_x_symbol" placeholder="MYC (2-5 caracteres)" required>
+            <br>
+            <label for="cond_y_name">Condição Y:</label>
+            <input type="text" name="cond_y_name" id="cond_y_name" placeholder="Brasil perder" required>
+            <br>
+            <label for="cond_y_symbol">Símbolo condição Y:</label>
+            <input type="text" name="cond_y_symbol" id="cond_y_symbol" placeholder="MYC (2-5 caracteres)" required>
+            <br>
+            <button type="submit">Criar aposta</button>
+        </form>
+    </body>
+</html>
