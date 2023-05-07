@@ -29,7 +29,7 @@ Project for Inteli Blockchain Challenge 2023
 ## Documentação
 Foi desenvolvido uma documentação do projeto focada em análise de mercado, entendimento da proposta, arquitetura do sistema e prototipagem do sistema. A documentação se encontra <a href="https://docs.google.com/document/d/1Y6gyiHvGz96yNZH1LmRvvzkRZO2S7VSM/edit#heading=h.147n2zr">neste documento</a>
 
-Ademais, realizamos uma prototipação do projeto, desenvolvendo as telas do front-end e como a aplicação seria idealmente através da plataforma Figma, sendo documentado <a href="https://www.figma.com/file/FHzn2l5SNXb0Bb8oCS9ET2/CryptoBet?type=design&node-id=15%3A9&t=sFimipxzf11SILIt-1> aqui. </a>
+Ademais, realizamos uma prototipação do projeto, desenvolvendo as telas do front-end e como a aplicação seria idealmente através da plataforma Figma, sendo documentado <a href="https://www.figma.com/file/FHzn2l5SNXb0Bb8oCS9ET2/CryptoBet?type=design&node-id=15%3A9&t=sFimipxzf11SILIt-1"> aqui. </a>
 
 ## Analise de mercado
 
