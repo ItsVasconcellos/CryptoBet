@@ -9,9 +9,7 @@ Project for Inteli Blockchain Challenge 2023
  - <a href="https://www.linkedin.com/in/mauro-das-chagas-junior-7306a71b9/">Mauro Chagas</a>
  - <a href="https://www.linkedin.com/in/rafaella-bianca-cavalcante/">Rafaella Cavalcante</a>
  
-## :bookmark_tabs: Project Description:
- 
-In this hackathon we developed an application for safe betting using Hathor Network 
+## :bookmark_tabs: Descrição do projeto:
 
 ### Problema
 
